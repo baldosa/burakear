@@ -1,0 +1,10 @@
+{
+  "name": "burakear",
+  "short_name": "burakear",
+  "description": "## Build Setup",
+  "icons": [],
+  "start_url": "/burakear/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
