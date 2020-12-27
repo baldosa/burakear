@@ -62,6 +62,7 @@
                         <v-text-field
                           v-model="editedItem.one"
                           label="Unos"
+                          type="number"
                         />
                       </v-col>
                       <v-col
@@ -72,6 +73,7 @@
                         <v-text-field
                           v-model="editedItem.two"
                           label="Dos"
+                          type="number"
                         />
                       </v-col>
                       <v-col
@@ -82,6 +84,7 @@
                         <v-text-field
                           v-model="editedItem.threeSeven"
                           label="Tres a siete"
+                          type="number"
                         />
                       </v-col>
                       <v-col
@@ -92,6 +95,7 @@
                         <v-text-field
                           v-model="editedItem.eigthThirteen"
                           label="Ocho a trece"
+                          type="number"
                         />
                       </v-col>
                       <v-col
@@ -102,6 +106,7 @@
                         <v-text-field
                           v-model="editedItem.joker"
                           label="Comodines"
+                          type="number"
                         />
                       </v-col>
                     </v-row>
