@@ -1,0 +1,14 @@
+{
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "ScoreBoard": {
+    "description": "Auto imported from components/ScoreBoard.vue"
+  },
+  "LazyScoreBoard": {
+    "description": "Auto imported from components/ScoreBoard.vue"
+  }
+}

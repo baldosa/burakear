@@ -1,0 +1,20 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "E:\\\\code\\\\burakear\\\\pages\\\\about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "rules",
+    "path": "/rules",
+    "component": "E:\\\\code\\\\burakear\\\\pages\\\\rules.vue",
+    "chunkName": "pages/rules"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\code\\\\burakear\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
