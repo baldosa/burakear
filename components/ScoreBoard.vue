@@ -109,6 +109,48 @@
                           type="number"
                         />
                       </v-col>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="4"
+                      >
+                        <v-text-field
+                          v-model="editedItem.pure"
+                          label="Canastas puras"
+                          type="number"
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="4"
+                      >
+                        <v-text-field
+                          v-model="editedItem.impure"
+                          label="Canastas impuras"
+                          type="number"
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="4"
+                      >
+                        <v-checkbox
+                          v-model="editedItem.cut"
+                          label="Cortó"
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="4"
+                      >
+                        <v-checkbox
+                          v-model="editedItem.dead"
+                          label="Compró muerto?"
+                        />
+                      </v-col>
                     </v-row>
                   </v-container>
                 </v-card-text>
@@ -220,6 +262,26 @@ export default {
           value: 'Joker',
           count: 0,
           score: 0
+        },
+        {
+          value: 'Canastas puras',
+          count: 0,
+          score: 0
+        },
+        {
+          value: 'Canastas impuras',
+          count: 0,
+          score: 0
+        },
+        {
+          value: 'Muerto',
+          count: 0,
+          score: 0
+        },
+        {
+          value: 'Corte',
+          count: 0,
+          score: 0
         }
       ],
       dialog: false,
@@ -237,14 +299,22 @@ export default {
         two: 0,
         threeSeven: 0,
         eigthThirteen: 0,
-        joker: 0
+        joker: 0,
+        pure: 0,
+        impure: 0,
+        cut: false,
+        dead: false
       },
       defaultItem: {
         one: 0,
         two: 0,
         threeSeven: 0,
         eigthThirteen: 0,
-        joker: 0
+        joker: 0,
+        pure: 0,
+        impure: 0,
+        cut: false,
+        dead: false
       }
     }
   },
@@ -321,6 +391,16 @@ export default {
       score = score + cards.threeSeven * 5
       score = score + cards.eigthThirteen * 10
       score = score + cards.joker * 50
+      score = score + cards.impure * 100
+      score = score + cards.pure * 200
+      if (cards.dead) {
+        score = score + 100
+      } else {
+        score = score - 100
+      }
+      if (cards.cut) {
+        score = score + 100
+      }
       return score
     },
     totalScore (player) {
